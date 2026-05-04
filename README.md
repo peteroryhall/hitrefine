@@ -45,21 +45,21 @@ python hitrefine.py -i hits.sdf -o filtered.sdf \
 
 | Flag | Description |
 |------|-------------|
-| `--logp` | Max logP |
-| `--tpsa` | Max TPSA (Å²) |
-| `--hba` | Max H-bond acceptors |
-| `--hbd` | Max H-bond donors |
-| `--rotbonds` | Max rotatable bonds |
-| `--fsp3-min` | Min Fsp3 fraction |
-| `--lipinski` | Apply Lipinski Ro5 |
-| `--veber` | Apply Veber rules |
-| `--egan` | Apply Egan rules |
-| `--qed` | Min QED score |
-| `--sa-max` | Max SA score (1=easy, 10=hard) |
-| `--pains` | Remove PAINS compounds |
-| `--brenk` | Remove Brenk alert compounds |
+| `--logp` | Max logP - lipophilicity; higher values reduce solubility and increase off-target binding |
+| `--tpsa` | Max TPSA (Å²) - polar surface area; predicts membrane permeability |
+| `--hba` | Max H-bond acceptors - too many reduces cell permeability |
+| `--hbd` | Max H-bond donors - too many reduces membrane permeability |
+| `--rotbonds` | Max rotatable bonds - high flexibility reduces oral bioavailability |
+| `--fsp3-min` | Min Fsp3 - fraction of sp3 carbons; higher values indicate more 3D character and better developability |
+| `--lipinski` | Apply Lipinski Ro5 - classic oral drug-likeness rule set |
+| `--veber` | Apply Veber rules - oral bioavailability filter (TPSA + rotatable bonds) |
+| `--egan` | Apply Egan rules - passive intestinal absorption filter |
+| `--qed` | Min QED score - overall drug-likeness estimate (0=bad, 1=ideal) |
+| `--sa-max` | Max SA score - synthetic accessibility (1=easy, 10=hard to synthesise) |
+| `--pains` | Remove PAINS - pan-assay interference compounds that give false positives in screens |
+| `--brenk` | Remove Brenk alerts - unstable or potentially toxic functional groups |
 | `--ref` | Reference SDF for Tanimoto similarity |
-| `--sim-min` | Min Tanimoto similarity to reference |
-| `--sim-max` | Max Tanimoto similarity to reference |
+| `--sim-min` | Min Tanimoto similarity to reference - keep compounds similar to known hits |
+| `--sim-max` | Max Tanimoto similarity to reference - remove near-duplicates of known hits |
 | `--plots` | Generate property distribution plots |
 | `--csv` | Custom path for CSV output |
