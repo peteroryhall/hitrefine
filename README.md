@@ -1,6 +1,6 @@
 # HitRefine
 
-Post-docking hit refinement tool. Filters docking hits by physicochemical properties, structural alerts, drug-likeness rules, and similarity to reference compounds — extending what tools like Ringtail cannot do.
+Post-docking hit refinement tool. Filters docking hits by physicochemical properties, structural alerts, drug-likeness rules, and similarity to reference compounds - extending what tools like Ringtail cannot do.
 
 ## Installation
 

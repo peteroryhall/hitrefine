@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HitRefine — post-docking hit refinement tool.
+HitRefine - post-docking hit refinement tool.
 Filters docking hits by physicochemical properties, structural alerts,
 drug-likeness rules, and similarity to reference compounds.
 """
