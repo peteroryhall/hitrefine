@@ -5,6 +5,8 @@ Post-docking hit refinement tool. Filters docking hits by physicochemical proper
 ## Installation
 
 ```bash
+git clone https://github.com/peteroryhall/hitrefine.git
+cd hitrefine
 micromamba env create -f environment.yml
 micromamba activate hitrefine
 ```
