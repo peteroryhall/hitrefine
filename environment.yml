@@ -1,10 +1,9 @@
 name: hitrefine
 channels:
   - conda-forge
-  - defaults
+  - nodefaults
 dependencies:
   - python=3.10
   - rdkit>=2023.09
   - matplotlib
   - pandas
-  - pip

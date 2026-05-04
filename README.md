@@ -7,8 +7,9 @@ Post-docking hit refinement tool. Filters docking hits by physicochemical proper
 ```bash
 git clone https://github.com/peteroryhall/hitrefine.git
 cd hitrefine
-micromamba env create -f environment.yml
+micromamba create -n hitrefine python=3.10 -y
 micromamba activate hitrefine
+micromamba install -n hitrefine -c conda-forge rdkit matplotlib pandas -y
 ```
 
 ## Usage
