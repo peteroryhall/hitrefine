@@ -41,6 +41,12 @@ python hitrefine.py -i hits.sdf -o filtered.sdf \
   --ref known_hits.sdf --sim-min 0.3 --sim-max 0.9
 ```
 
+## Expected Output
+
+Running `hitrefine.py` with `--plots` generates a property distribution summary showing all compounds (grey) vs passing compounds (blue):
+
+![Example output](example_output.png)
+
 ## Workflow
 
 ```
