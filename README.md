@@ -41,6 +41,32 @@ python hitrefine.py -i hits.sdf -o filtered.sdf \
   --ref known_hits.sdf --sim-min 0.3 --sim-max 0.9
 ```
 
+## Workflow
+
+```
+Ringtail → hitrefine.py → prolif_diagrams.py → make_pptx.py
+```
+
+1. Filter docking hits with `hitrefine.py`
+2. Generate 2D interaction diagrams with `prolif_diagrams.py`
+3. Compile into a PowerPoint with `make_pptx.py`
+
+## Interaction Diagrams
+
+Generate 2D protein-ligand interaction diagrams (H-bonds, VdW contacts, pi-stacking):
+
+```bash
+python prolif_diagrams.py -i filtered.sdf -r receptor.pdb -o diagrams/
+```
+
+## PowerPoint
+
+Compile all diagrams into a PowerPoint for easy review:
+
+```bash
+python make_pptx.py -i diagrams/ -o interactions.pptx
+```
+
 ## Options
 
 | Flag | Description |

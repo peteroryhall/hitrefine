@@ -7,3 +7,7 @@ dependencies:
   - rdkit>=2023.09
   - matplotlib
   - pandas
+  - prolif
+  - mdanalysis
+  - pillow
+  - python-pptx
