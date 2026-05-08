@@ -85,7 +85,7 @@ def make_plots(records, output_dir):
 def main():
     args = parse_args()
 
-    suppl = Chem.SDMolSupplier(args.input, removeHs=True)
+    suppl = Chem.SDMolSupplier(args.input, removeHs=False)
     if suppl is None:
         sys.exit(f"Could not read input: {args.input}")
 
