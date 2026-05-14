@@ -5,7 +5,9 @@ from rdkit import Chem
 
 
 def morgan_fp(mol, radius=2, nbits=2048):
-    return AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=nbits)
+    from rdkit.Chem import rdFingerprintGenerator
+    gen = rdFingerprintGenerator.GetMorganGenerator(radius=radius, fpSize=nbits)
+    return gen.GetFingerprint(mol)
 
 
 def tanimoto(mol, ref_fps):
